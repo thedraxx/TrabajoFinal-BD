@@ -4,6 +4,7 @@ export const querys ={
     JOIN propiedades pr ON pr.id_provincia = p.id_provincia
     JOIN tipo_propiedad tp ON tp.id_tipo_propiedad = pr.id_tipo_propiedad
     WHERE tp.descripcion = "Casa"
-    group by p.descripcion`
-    
+    group by p.descripcion`,
+    vista: 'SELECT * FROM test',
+    getPropiedadesVendedorProcedimiento: `CALL getPropiedadesVendedorProcedimento(1)`
 }

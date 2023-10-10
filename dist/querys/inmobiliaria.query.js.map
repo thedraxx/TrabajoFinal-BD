@@ -1,1 +1,1 @@
-{"version":3,"file":"inmobiliaria.query.js","sourceRoot":"","sources":["../../querys/inmobiliaria.query.ts"],"names":[],"mappings":";;;AAAa,QAAA,MAAM,GAAE;IACjB,cAAc,EAAE,2BAA2B;IAC3C,oBAAoB,EAAE;;;;2BAIC;CAE1B,CAAA"}
+{"version":3,"file":"inmobiliaria.query.js","sourceRoot":"","sources":["../../querys/inmobiliaria.query.ts"],"names":[],"mappings":";;;AAAa,QAAA,MAAM,GAAE;IACjB,cAAc,EAAE,2BAA2B;IAC3C,oBAAoB,EAAE;;;;2BAIC;IACvB,KAAK,EAAE,oBAAoB;IAC3B,mCAAmC,EAAE,4CAA4C;CACpF,CAAA"}

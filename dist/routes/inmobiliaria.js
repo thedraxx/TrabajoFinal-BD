@@ -6,6 +6,8 @@ const inmobiliaria_1 = require("../controller/inmobiliaria");
 const router = (0, express_1.Router)();
 router.get('/getPropiedades', inmobiliaria_1.getPropiedades);
 router.get('/maxSuperficieCasaDec', inmobiliaria_1.maxSuperficieCasaDec);
+router.get('/vista', inmobiliaria_1.testVista);
+router.get('/procedimiento', inmobiliaria_1.getPropiedadesVendedorProcedimiento);
 // router.get('/:id', getUsuario);
 // router.post('/', postUsuario);
 // router.put('/:id', putUsuario);

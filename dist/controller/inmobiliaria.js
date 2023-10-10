@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.maxSuperficieCasaDec = exports.getPropiedades = void 0;
+exports.getPropiedadesVendedorProcedimiento = exports.testVista = exports.maxSuperficieCasaDec = exports.getPropiedades = void 0;
 const sequelize_1 = require("sequelize");
 const conecction_1 = __importDefault(require("../database/conecction"));
 const inmobiliaria_query_1 = require("../querys/inmobiliaria.query");
@@ -30,6 +30,20 @@ const maxSuperficieCasaDec = (req, res) => __awaiter(void 0, void 0, void 0, fun
     });
 });
 exports.maxSuperficieCasaDec = maxSuperficieCasaDec;
+const testVista = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const propiedades = yield conecction_1.default.query(inmobiliaria_query_1.querys.vista, { type: sequelize_1.QueryTypes.SELECT });
+    res.json({
+        "Propiedades": propiedades
+    });
+});
+exports.testVista = testVista;
+const getPropiedadesVendedorProcedimiento = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const propiedades = yield conecction_1.default.query(inmobiliaria_query_1.querys.getPropiedadesVendedorProcedimiento, { type: sequelize_1.QueryTypes.SELECT });
+    res.json({
+        "Propiedades-Procedimientos": propiedades
+    });
+});
+exports.getPropiedadesVendedorProcedimiento = getPropiedadesVendedorProcedimiento;
 // export const getUsuario = async(req: Request,res: Response) => {
 //     const {id} = req.params;
 //     const usuario = await Usuario.findByPk(id);

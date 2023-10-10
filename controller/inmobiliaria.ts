@@ -13,7 +13,6 @@ export const getPropiedades = async(req: Request,res: Response) => {
 
 }
 
-
 export const maxSuperficieCasaDec = async(req: Request,res: Response) => {
     
     const propiedades = await db.query(querys.maxSuperficieCasaDec, { type: QueryTypes.SELECT });
@@ -22,6 +21,27 @@ export const maxSuperficieCasaDec = async(req: Request,res: Response) => {
         "Propiedades": propiedades
     });
 
+}
+
+
+export const testVista = async(req: Request,res: Response) => {
+    
+    const propiedades = await db.query(querys.vista, { type: QueryTypes.SELECT });
+
+    res.json({
+        "Propiedades": propiedades
+    });
+
+}
+
+export const getPropiedadesVendedorProcedimiento = async(req: Request,res: Response) => {
+        
+        const propiedades = await db.query(querys.getPropiedadesVendedorProcedimiento, { type: QueryTypes.SELECT });
+    
+        res.json({
+            "Propiedades-Procedimientos": propiedades
+        });
+    
 }
 
 
